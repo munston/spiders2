@@ -1,0 +1,5 @@
+SCORE:19.0
+MESSAGE:a
+RESPONSE:[test-agent echo] a
+
+---

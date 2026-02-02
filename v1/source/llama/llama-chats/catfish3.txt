@@ -1,0 +1,7 @@
+----------------------------------------
+Input Sequence: [("cat",3),("fish",3)]
+----------------------------------------
+TRIGGER: cat | RESULT: nip oil 
+TRIGGER: fish | RESULT:  oil sal
+
+

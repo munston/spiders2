@@ -1,0 +1,5 @@
+Here are three concise factual bullet points about the Rust programming language:
+
+* Rust is a general-purpose programming language that emphasizes performance, type safety, concurrency, and memory safety, and supports multiple programming paradigms, including functional and object-oriented programming.
+* Rust was created by Graydon Hoare in 2006 while working at Mozilla, and the first stable release, Rust 1.0, was published in May 2015, with Mozilla officially sponsoring the project in 2009.
+* Rust is designed to enforce memory safety without a conventional garbage collector, using a "borrow checker" to track object lifetimes and prevent memory safety errors and data races at compile time.

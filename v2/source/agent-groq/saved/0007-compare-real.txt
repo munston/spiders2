@@ -1,0 +1,1 @@
+compare:hex:name a fruit;;;name a vegetable;;;name a color

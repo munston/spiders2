@@ -1,0 +1,25 @@
+cabal-version:      2.4
+name:               postbox
+version:            0.1.0.0
+synopsis:           File-based message queue with inbox/outbox pattern
+license:            MIT
+
+library
+  default-language: Haskell2010
+  hs-source-dirs:   src
+  exposed-modules:
+    Postbox
+    Postbox.Compare
+    Postbox.Fly
+    Postbox.Modality
+    Postbox.Poll
+    Postbox.Request
+  build-depends:
+    base >=4.14 && <5,
+    containers,
+    directory,
+    filepath,
+    fsnotify,
+    process,
+    time,
+    words

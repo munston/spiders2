@@ -1,0 +1,5 @@
+Here are 3 concise factual bullet points summarizing the content on quantum computing:
+
+* A quantum computer utilizes superposed and entangled states to perform calculations, potentially exponentially faster than classical computers, and is not limited by deterministic rules like classical computers.
+* The basic unit of information in quantum computing is the qubit, which can exist in a linear combination of two states (quantum superposition) and is measured probabilistically, unlike classical bits which can only be in one of two states.
+* Current quantum computing hardware is largely experimental and prone to errors due to quantum decoherence, but researchers have made progress in developing scalable qubits and have demonstrated "quantum advantage" or "quantum supremacy" on narrowly defined tasks.
