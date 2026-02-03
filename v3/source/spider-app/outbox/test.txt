@@ -1,0 +1,5 @@
+Here are three concise factual bullet points about Python programming:
+
+* Python is a high-level, general-purpose programming language that supports multiple programming paradigms, including structured, object-oriented, and functional programming.
+* Python was created by Guido van Rossum in the late 1980s as a successor to the ABC programming language, and the first version (0.9.0) was released in 1991.
+* The Python Software Foundation currently supports versions 3.10, 3.11, 3.12, 3.13, and 3.14, with earlier versions in the 3.x series having reached end-of-life and no longer receiving security updates.

@@ -1,0 +1,32 @@
+packages:
+  source/llm-common/
+  source/groq-llama/
+  source/huggingface-llama/
+  source/scraper/
+  source/postbox/
+  source/spider-app/
+  source/bird/
+
+package llm-common
+  ghc-options: -fno-code
+
+package groq-llama
+  ghc-options: -fno-code
+
+package huggingface-llama
+  ghc-options: -fno-code
+
+package scraper
+  ghc-options: -fno-code
+
+package postbox
+  ghc-options: -fno-code
+
+package spider-app
+  ghc-options: -fno-code
+
+package bird
+  ghc-options: -fno-code
+
+constraints:
+  zlib +bundled-c-zlib

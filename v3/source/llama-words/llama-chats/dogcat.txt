@@ -1,0 +1,5 @@
+Input Sequence: [("dog",2),("cat",3)]
+AI Response:
+dog training classescat training classes
+
+

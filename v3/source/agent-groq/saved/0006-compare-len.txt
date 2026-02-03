@@ -1,0 +1,1 @@
+compare:length:say abc;;;say def;;;say xyz
