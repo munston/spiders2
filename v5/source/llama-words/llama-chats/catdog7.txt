@@ -1,0 +1,11 @@
+----------------------------------------
+SESSION LOG
+Input Sequence: [("cat",7),("dog",7)]
+----------------------------------------
+
+Trigger [cat]: nip oil
+Catnip oil is
+
+Trigger [dog]:  food oil, not catnip oil
+
+

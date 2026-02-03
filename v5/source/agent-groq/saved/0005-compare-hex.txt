@@ -1,0 +1,1 @@
+compare:hex:say abc;;;say def;;;say xyz
