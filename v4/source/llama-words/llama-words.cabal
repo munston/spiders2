@@ -1,0 +1,29 @@
+cabal-version:      2.4
+name:               llama-words
+version:            0.1.0.0
+
+library
+  default-language:   Haskell2010
+  hs-source-dirs:     src
+  
+  -- This allows GHCi to see everything
+  exposed-modules:    
+    Main  
+    , LlamaWords
+ 
+  
+  -- Crucial for GHCi to resolve the C++ symbols at runtime
+  extra-libraries:    llama, stdc++
+  extra-ghci-libraries: llama
+  
+  -- External paths for your MSYS2/UCRT64 environment
+  include-dirs:       C:/msys64/ucrt64/include
+  extra-lib-dirs:     C:/msys64/ucrt64/lib
+
+  build-depends:      
+      base >= 4.14 && < 5
+    , random
+    , directory
+    , filepath
+    , llama
+    , words

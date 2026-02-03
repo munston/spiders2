@@ -1,0 +1,13 @@
+----------------------------------------
+SESSION LOG
+Input Sequence: [("cat",5),("fish",5)]
+----------------------------------------
+TRIGGER: cat | TOKENS GENS: 5
+RESULT: nip oil
+Catnip
+
+TRIGGER: fish | TOKENS GENS: 5
+RESULT:  oil, also known as
+
+
+
