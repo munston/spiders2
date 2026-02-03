@@ -1,0 +1,1 @@
+compare:say hi in 5 words;;;say hello in 10 words;;;say greetings in 20 words

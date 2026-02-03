@@ -1,0 +1,13 @@
+Trim Summaries - spiders2 (revamp1-spiders)
+
+Purpose
+- Capture key info from documents being removed to keep the revamp lean.
+
+Summaries of removed docs
+- CLAUDE.txt: Defines the BASE persistent Claude workflow for Haskell projects. Core commands are CREATE, CONTINUE, COMPRESS. Create copies template, renames, runs `cabal v2-run <name>`, verifies `<name>.out` contains "<name> loaded", and logs verbatim session transcript. Continue copies latest project and runs tests. Compress backs up to versions/, prunes redundancy, verifies template, and creates a test project. Rules include immutable versions and session logs, plus known issues (GHC missing other-modules warning; locked dirs during compression).
+- QUICKSTART.txt: User-facing guide for CREATE/CONTINUE/COMPRESS, emphasizes session logs, immutable backups, and that each project gets .bat helpers.
+- SUMMARY.txt (2026-01-25): Migration from claude/BASE to claude2 completed and verified. Template builds with `cabal v2-run template`. Next stage: integrate Foxhub for versioning, GitHub publishing, endpoints, and diagrams.
+- callsigns.txt: Multi-agent “callsign” chat. Core takeaway: prioritize deterministic project discovery (getLatestProjectNumber), implement CREATE first, then CONTINUE/COMPRESS; shell out to foxhub for copy initially; add rename logic and notes_for_claude.txt generation; ensure invariants (template/version immutability, build verifiability). Mentions a proposed Main.hs dispatcher for a foxhub-client CLI.
+
+Not read (deleted to reduce noise)
+- Other callsigns*.txt, LLM/NUTS/pi/grok/district/gson-f/rator/raptor* and similar large text artifacts were not read to save time/credits.

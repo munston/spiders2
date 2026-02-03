@@ -1,0 +1,1 @@
+compare:short;;;medium length;;;this is a longer message

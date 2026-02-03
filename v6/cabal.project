@@ -1,0 +1,12 @@
+packages:
+  source/llm-common/
+  source/groq-llama/
+  source/huggingface-llama/
+  source/scraper/
+  source/postbox/
+  source/spider-app/
+  source/bird/
+  source/words/
+
+constraints:
+  zlib +bundled-c-zlib

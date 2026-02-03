@@ -1,0 +1,38 @@
+From: codex@local
+To: user@local
+Subject: spiders2 project overview
+Date: Mon, 02 Feb 2026 19:35:00 -0500
+Content-Type: text/plain; charset="utf-8"
+
+Project: spiders2 (revamp1-spiders)
+Location: C:\Users\HP\code\guy4\feb\02\revamp1-spiders\v1
+
+High-level state
+- This is the BASE persistent Claude development environment for Haskell projects.
+- Primary workflow is documented in CLAUDE.txt and QUICKSTART.txt.
+- A recent migration was completed on 2026-01-25 (see SUMMARY.txt). The template builds successfully with `cabal v2-run template` and verifies via `template.out`.
+- Next intended stage is FOXHUB integration (auto versioning, GitHub publishing, endpoint generation).
+
+Key structure
+- claude_project_1: template reference implementation
+- claude_project_2: continuation slot
+- versions/: immutable backups (do not edit)
+- saves/: additional saves
+- CLAUDE.txt: authoritative workflow rules and project structure
+- QUICKSTART.txt: user guide and example session
+- SUMMARY.txt: migration status and next-stage plan
+
+Primary workflows (per CLAUDE.txt / QUICKSTART.txt)
+- Create: new project from template; build with `cabal v2-run <name>`; verify `<name>.out` contains "<name> loaded"; write verbatim session transcript.
+- Continue: copy latest claude_project_N to N+1 and run tests.
+- Compress: back up to versions/ (excluding versions/ and saves/), prune redundant files, verify template build, create a test project.
+
+Known issues / notes
+- GHC warning about missing other-modules is cosmetic and can be ignored.
+- Compression can fail due to locked directories; remove dist-newstyle or skip locked dirs.
+- FOXHUB integration is explicitly called out as the next stage (see SUMMARY.txt), referencing local foxhub tooling and endpoint/diagram interface design.
+
+Pointers for restart
+- Start with CLAUDE.txt and QUICKSTART.txt to re-establish the workflow.
+- Verify the template build: `cabal v2-run template` and check template.out.
+- Identify the latest claude_project_N and continue from there.

@@ -1,0 +1,12 @@
+cabal-version:      2.4
+name:               llama
+version:            0.1.0.0
+
+library
+  default-language: Haskell2010
+  hs-source-dirs:   src
+  exposed-modules:  Main,Llama, LlamaText,LlamaBatch
+  extra-libraries:  llama, stdc++
+  include-dirs:     C:/msys64/ucrt64/include
+  extra-lib-dirs:   C:/msys64/ucrt64/lib
+  build-depends:    base,directory,filepath

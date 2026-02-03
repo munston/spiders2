@@ -1,0 +1,41 @@
+From: codex@local
+To: user@local
+Subject: spiders2 revamp - package summary, risks, and test notes
+Date: Mon, 02 Feb 2026 21:00:00 -0500
+Content-Type: text/plain; charset="utf-8"
+
+Project: spiders2 (revamp1-spiders)
+
+Packages and purpose (from cabal files)
+- spider-app: File watcher that generates URLs from text via LLM; depends on llm-common, groq-llama, huggingface-llama, scraper, postbox, words. Exposes Spider.Pipeline and executable `spider`.
+- llm-common: Shared types and HTTP/JSON utilities for LLM API clients.
+- groq-llama: Groq Llama API client.
+- huggingface-llama: HuggingFace Llama API client.
+- scraper: Web scraper for extracting text content from URLs.
+- postbox: File-based message queue with inbox/outbox pattern, file watching, and request/poll utilities.
+- bird: Postbox test harness with CLI; provides tests and suites.
+- words: Text scoring and corpus lookup utilities (library + `words` executable).
+- llama / llama-words: Local C++ llama bindings; hardcoded MSYS2 include/lib paths; likely Windows-only.
+
+What it does not do (current state)
+- No single “top-level” build target in the repo root; you must build via cabal.project or package names.
+- The cabal.project currently omits `words`, `llama`, and `llama-words` packages; any builds that depend on `words` will fail unless added.
+- Batch scripts expect prebuilt binaries in specific dist-newstyle paths; no scripts provided to build those binaries.
+
+Design flaws / concerns for revamp
+- Hardcoded system paths in llama packages (C:/msys64/ucrt64/include|lib) reduce portability and will break on non-Windows or different MSYS2 setups.
+- bird*.bat scripts assume a specific GHC version path under dist-newstyle (ghc-9.6.7); brittle across upgrades.
+- Several call-sign workflow batch files assume a fixed working directory (C:\Users\User\Desktop\code\callsign) and external `foxhub-cli` availability.
+- cabal.project flags `-fno-code` for all listed packages; compile or runtime behavior may be unexpected if real builds are required.
+
+Tests attempted
+- `cabal build` from v1 failed with: no targets in current dir (expected).
+- `cabal build all` from v1 timed out after ~14s. No success confirmation.
+
+Revamp folder contents
+- `revamp.spiders.code/source`: full copy of source tree (packages, agent inbox/outbox data, batch scripts, words.txt).
+- `revamp.spiders.code/runtime`: copy of central call-sign batch scripts.
+- `revamp.spiders.code/cabal.project`: project file for builds.
+
+Notes
+- See `revamp.spiders.code/trim-summaries.txt` for condensed info from removed docs.
